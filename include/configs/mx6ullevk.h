@@ -224,6 +224,8 @@
 		   "fi; " \
 	   "else run netboot; fi"
 #endif
+#define CONFIG_BOOTCOMMAND "tftp 80800000 alientek/alpha/zImage; tftp 83000000 alientek/alpha/imx6ull-14x14-emmc-7-1024x600-c.dtb; bootz 80800000 - 83000000"
+#define CONFIG_BOOTARGS "console=ttymxc0,115200 root=/dev/nfs rw nfsroot=192.168.1.17:/home/yaofeng/network_share/linux-os/nfs/alientek/alpha/rootfs ip=192.168.1.10:192.168.1.17:192.168.1.1:255.255.255.0::eth0:off"
 
 /* Miscellaneous configurable options */
 #define CONFIG_CMD_MEMTEST
